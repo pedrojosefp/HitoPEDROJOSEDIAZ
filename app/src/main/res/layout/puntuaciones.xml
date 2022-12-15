@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:background="@color/sangre"
+    tools:context=".Puntuaciones">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="8"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/str_boton_puntuaciones"
+            android:layout_weight="0.75"
+            android:id="@+id/scoreLabel"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="30sp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.25"
+            android:id="@+id/scoreTable">
+        </TableLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:text="@string/str_menu_principal"
+            android:backgroundTint="@color/ColorFondo"
+            android:textColor="@color/sangre"
+            android:id="@+id/button_Menu"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

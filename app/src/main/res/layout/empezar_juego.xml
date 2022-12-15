@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:background="@color/sangre"
+    tools:context=".EmpezarJuego">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="3">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/str_titulo"
+            android:id="@+id/text_title"
+            android:textSize="22pt"
+            android:layout_weight="0.4"
+            android:layout_marginTop="10dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/img_start_mole"
+            android:src="@drawable/cyberdm"
+            android:layout_weight="1.6"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_boton_empezar"
+                android:textColor="@color/sangre"
+                android:backgroundTint="@color/ColorFondo"
+                android:id="@+id/button_start"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_boton_puntuaciones"
+                android:textColor="@color/sangre"
+                android:backgroundTint="@color/ColorFondo"
+                android:id="@+id/button_scores"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/str_boton_opciones"
+                android:textColor="@color/sangre"
+                android:backgroundTint="@color/ColorFondo"
+                android:id="@+id/button_options"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

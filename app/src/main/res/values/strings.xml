@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">App PedroJose</string>
+
+    <string name="str_boton_empezar">Empezar Juego</string>
+    <string name="str_boton_puntuaciones">Mejores Puntuaciones</string>
+    <string name="str_titulo">KILL THEM ALL</string>
+    <string name="str_boton_opciones">Opciones</string>
+    <string name="str_menu_principal">Menú Principal</string>
+        <string name="str_boton_enviar">Enviar puntuaje más alto</string>
+    <string name="str_boton_guardar">Guardar cambios</string>
+    <string name="str_opciones">Opciones</string>
+
+    <string name="str_final_juego">Fin del Juego</string>
+    <string name="str_savedmsg">Cambios Guardados</string>
+    <string name="str_empty_name">Mete tu nombre!</string>
+
+    <string name="str_tu_puntuacion">Tu puntación:</string>
+    <string name="str_meter_nombre">Mete tu nombre</string>
+    <string name="zero">0</string>
+
+    <string name="str_tiempo_label">Tiempo:</string>
+    <string name="str_puntuacion_label">Puntación:</string>
+
+    <string name="str_end_time">Se acabo el tiempo!</string>
+    <string name="str_end_lives">Se acabaron las vidas!</string>
+
+    <string name="str_limpiar_puntuacion">Limpiar Puntuación</string>
+    <string name="str_clear_scores_alert">¿De verdad quieres hacer esto?</string>
+
+    <string name="str_yes">Si</string>
+    <string name="str_no">No</string>
+
+    <string name="str_dificultad">Dificultad</string>
+
+    <string name="diff1">Fácil</string>
+    <string name="diff2">Nomal</string>
+    <string name="diff3">Dificil</string>
+
+    <string-array name="difficulties">
+        <item>@string/diff1</item>
+        <item>@string/diff2</item>
+        <item>@string/diff3</item>
+    </string-array>
+
+    <string name="str_clearscore">Tabla de puntaciones limpia</string>
+
+    <string name="default_name">Desconocido</string>
+
+</resources>

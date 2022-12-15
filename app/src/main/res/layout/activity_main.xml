@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/sangre">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:background="@color/sangre"
+        >
+
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/vida1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/vida1"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/vida2"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/vida1"
+            android:layout_toRightOf="@+id/vida1"
+            android:layout_toEndOf="@+id/vida1"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/vida3"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/vida1"
+            android:layout_toRightOf="@+id/vida2"
+            android:layout_toEndOf="@+id/vida2"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/vida4"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/vida1"
+            android:layout_toRightOf="@+id/vida3"
+            android:layout_toEndOf="@+id/vida3"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/vida5"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/vida1"
+            android:layout_toRightOf="@+id/vida4"
+            android:layout_toEndOf="@+id/vida4"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_tiempo_label"
+            android:id="@+id/textTimeLbL"
+            android:textSize="10pt"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textTimeVal"
+            android:layout_toStartOf="@+id/textTimeVal"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTimeVal"
+            android:textSize="10pt"
+            android:text="@string/zero"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gameCanvas"
+        android:orientation="vertical"
+        android:weightSum="3.75"
+        android:layout_below="@+id/topBar"
+        android:layout_above="@+id/bottomBar"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:id="@+id/row0"
+            android:orientation="horizontal"
+            android:background="@color/sangre">
+        </RelativeLayout>
+
+        <!--Fila 1-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/row1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole1"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole2"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole3"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sangre"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3"
+                >
+
+                <ImageView
+
+                    android:layout_width="140dp"
+                    android:layout_height="115dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill1"
+                    android:src="@drawable/crater"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+
+                    android:layout_width="140dp"
+                    android:layout_height="115dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill2"
+                    android:src="@drawable/crater"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+
+                    android:layout_width="140dp"
+                    android:layout_height="115dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill3"
+                    android:src="@drawable/crater"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--Fila 2-->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/row2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3"
+                >
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole4"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole5"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole6"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sangre"
+                    android:layout_weight="1"
+                    >
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill4"
+                    android:src="@drawable/crater"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill5"
+                    android:src="@drawable/crater"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill6"
+                    android:src="@drawable/crater"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--Fila 3-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/row3"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole7"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+
+                <ImageView
+                    android:id="@+id/imageMole8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/demoniogolpe"
+                    tools:ignore="SpeakableTextPresentCheck" />
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageMole9"
+                    android:src="@drawable/demoniogolpe"
+                    android:layout_gravity="bottom"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sangre"
+                    android:layout_weight="1"
+                    >
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="3"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill7"
+                    android:src="@drawable/crater"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill8"
+                    android:src="@drawable/crater"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageHill9"
+                    android:src="@drawable/crater"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:id="@+id/row4"
+            android:orientation="horizontal"
+            android:background="@color/sangre">
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sangre"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_puntuacion_label"
+            android:id="@+id/textScoreLbl"
+            android:textSize="12pt"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textScoreVal"
+            android:textSize="12pt"
+            android:text="@string/zero"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textScoreLbl"
+            android:layout_toEndOf="@+id/textScoreLbl"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
